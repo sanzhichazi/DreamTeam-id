@@ -77,8 +77,8 @@ Specialized AI agents cover the full spectrum of operations:
 
 Darwin 通过机器学习不断优化自身：  
 Darwin continuously improves itself through machine learning:  
-- 交易数据学习：每一次销售、成本与互动都成为训练数据  
-- Transactional Data Learning: Each sale, cost, and interaction becomes training data  
+- 交易数据学习:每一次销售、成本与互动都成为 Agent 迭代的数据
+- Transaction-driven learning: every sale, cost, and customer interaction becomes training data for the AI agents to evolve.
 - 实时优化：动态定价与趋势预测  
 - Real-Time Optimization: Dynamic pricing and trend forecasting  
 - 表现增强：广告效果与客户留存优化  
@@ -137,3 +137,6 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 Built with by the Darwin AI Team  
 用人工智能赋能未来的自主电商世界  
 Empowering the future of autonomous e-commerce through artificial intelligence
+
+#AdventureX2025
+
