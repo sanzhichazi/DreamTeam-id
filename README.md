@@ -1,248 +1,139 @@
-# The AI-Powered Crypto E-commerce Ecosystem
+# 基于 AI 的加密电商生态系统  
+# AI-Powered Crypto E-commerce Ecosystem
 
-
-**Darwin** is an AI-powered crypto e-commerce ecosystem that enables anyone to build a global, automated, and ever-evolving online business. Run your e-commerce store with AI, 24/7, fully automated and profit-generating.
-
-## 🚀 Vision: AI as Your Business Partner
-
-Darwin transforms AI into your intelligent co-founder—automating decisions, operations, and growth. You focus on creativity and products while AI handles sourcing, pricing, fulfillment, marketing, and customer support.
-
-### Key Benefits
-- **Borderless Commerce**: Crypto payments support (USDT, USDC, and more)
-- **Continuous Learning**: Every transaction fuels AI learning for smarter operations
-- **Zero Team Required**: Launch and run a store with complete AI automation
-- **Global Reach**: Integrated with ForestMarket.net for worldwide accessibility
-
-## 🤖 Core AI Modules
-
-### Multi-Agent AI System
-Specialized AI agents handle different aspects of your business:
-- Product selection and curation
-- Dynamic pricing strategies
-- Risk assessment and control
-- Customer service automation
-- Marketing campaign management
-
-### AI-Powered Product Sourcing
-- Real-time trend analysis
-- User preference prediction
-- Competitor monitoring and analysis
-- Market opportunity identification
-
-### Smart Inventory & Logistics
-- Automated API integrations
-- Intelligent restocking systems
-- Optimized delivery route planning
-- Supply chain management
-
-### AI Marketing Engine
-- Automated content generation
-- Advanced audience segmentation
-- Multi-language campaign creation
-- Performance optimization
-
-### Risk & Compliance Automation
-- Dynamic pricing safeguards
-- Automated customs/tax rule lookup
-- Payment compliance monitoring
-- Fraud detection and prevention
-
-### Crypto Payment Integration
-- MetaMask and OKX wallet support
-- Instant settlement processing
-- Zero banking barriers
-- Multi-cryptocurrency support
-
-## 🧠 How Darwin Evolves
-
-Darwin continuously improves through machine learning:
-
-- **Transaction Data Learning**: Every sale, cost, and interaction becomes training data
-- **Real-time Optimization**: Dynamic pricing and trend forecasting
-- **Performance Enhancement**: Ad performance and customer retention optimization
-- **Predictive Analytics**: Customer profiling and behavior prediction
-
-This creates an AI commerce system that learns, earns, and evolves with your business.
-
-## 👥 Target Audience
-
-### Creators
-Launch a complete store without building a team—AI handles everything from product sourcing to customer support.
-
-### Web3 Projects
-Sell merchandise, event tickets, digital collectibles, and NFTs with crypto-native payment processing.
-
-### Tech Entrepreneurs
-Build custom AI agents and e-commerce logic through comprehensive APIs and integrations.
-
-## 🛠 Technology Stack
-
-- **Frontend**: Next.js 15, React 19, TypeScript
-- **Styling**: Tailwind CSS, Radix UI Components
-- **Content Management**: BaseHub CMS
-- **Email Service**: Resend API
-- **Authentication**: Next-themes for theme management
-- **Deployment**: Vercel (recommended)
-
-## 📦 Installation & Setup
-
-### Prerequisites
-- Node.js 18+ 
-- npm/pnpm package manager
-- BaseHub account
-- Resend account (for email functionality)
-
-### Environment Variables
-Create a `.env.local` file with the following variables:
-
-\`\`\`bash
-# BaseHub Configuration
-BASEHUB_TOKEN="your-basehub-token"
-
-# Email Service
-RESEND_API_KEY="your-resend-api-key"
-
-# Optional: Vercel deployment
-VERCEL_PROJECT_PRODUCTION_URL="your-domain.com"
-\`\`\`
-
-### Quick Start
-
-1. **Clone the repository**
-\`\`\`bash
-git clone https://github.com/your-username/darwin-ai-ecommerce.git
-cd darwin-ai-ecommerce
-\`\`\`
-
-2. **Install dependencies**
-\`\`\`bash
-pnpm install
-\`\`\`
-
-3. **Configure environment variables**
-\`\`\`bash
-cp .env.example .env.local
-# Edit .env.local with your API keys
-\`\`\`
-
-4. **Start development server**
-\`\`\`bash
-pnpm dev
-\`\`\`
-
-5. **Open your browser**
-Navigate to `http://localhost:3000`
-
-## 🚀 One-Click Deployment
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdarwin-ai%2Fecommerce-ecosystem&integration-ids=oac_xwgyJe0UwFLtsKIvIScYh0rY&project-name=darwin-ai-ecommerce&repository-name=darwin-ai-ecommerce&env=RESEND_API_KEY,BASEHUB_TOKEN&envDescription=Configure%20your%20API%20keys&envLink=https%3A%2F%2Fdocs.basehub.com)
-
-## 📁 Project Structure
-
-\`\`\`
-├── app/                    # Next.js app directory
-│   ├── api/               # API routes
-│   │   ├── email-unsubscribe/
-│   │   └── webhooks/
-│   ├── manifesto/         # Product vision page
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx          # Homepage
-├── components/            # Reusable components
-│   ├── box/              # Wrapper components
-│   ├── header/           # Navigation components
-│   ├── mesh-gradient/    # Background effects
-│   ├── switch-theme/     # Theme switcher
-│   └── waitlist-form/    # Email collection form
-├── context/              # React context providers
-├── emails/               # Email templates
-├── lib/                  # Utility functions
-├── public/               # Static assets
-└── basehub.config.ts     # BaseHub configuration
-\`\`\`
-
-## 🔧 Configuration
-
-### BaseHub Setup
-1. Create a BaseHub account at [basehub.com](https://basehub.com)
-2. Create a new repository
-3. Copy your read token to `BASEHUB_TOKEN`
-
-### Email Configuration
-1. Sign up for Resend at [resend.com](https://resend.com)
-2. Generate an API key
-3. Add to `RESEND_API_KEY` environment variable
-
-### Theme Customization
-The project uses a custom color system with light/dark mode support:
-- Modify `tailwind.config.ts` for color schemes
-- Update `app/globals.css` for CSS variables
-- Configure default theme in BaseHub settings
-
-## 🔮 Roadmap
-
-### Phase 1: Foundation (Current)
-- ✅ Waitlist collection system
-- ✅ Email newsletter functionality
-- ✅ Responsive design with theme support
-- ✅ BaseHub CMS integration
-
-### Phase 2: AI Integration (Coming Soon)
-- 🔄 OpenAI/Claude API integration
-- 🔄 Product recommendation engine
-- 🔄 Automated content generation
-- 🔄 Customer service chatbot
-
-### Phase 3: E-commerce Core (Planned)
-- 📋 Product catalog management
-- 📋 Shopping cart functionality
-- 📋 Order processing system
-- 📋 Inventory management
-
-### Phase 4: Crypto Payments (Planned)
-- 📋 MetaMask integration
-- 📋 Multi-cryptocurrency support
-- 📋 Smart contract interactions
-- 📋 DeFi payment processing
-
-### Phase 5: Advanced AI (Future)
-- 📋 Multi-agent AI system
-- 📋 Predictive analytics
-- 📋 Automated marketing campaigns
-- 📋 Supply chain optimization
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🔗 Links
-
-- **Website**: [darwin-ai.com](https://darwin-ai.com)
-- **Documentation**: [docs.darwin-ai.com](https://docs.darwin-ai.com)
-- **Twitter**: [@DarwinGjzx2](https://x.com/DarwinGjzx2)
-- **Telegram**: [@darwingjzx](https://t.me/darwingjzx)
-- **BaseHub Template**: [BaseHub Templates](https://basehub.com/templates)
-
-## 💬 Support
-
-- **Issues**: [GitHub Issues](https://github.com/darwin-ai/ecommerce-ecosystem/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/darwin-ai/ecommerce-ecosystem/discussions)
-- **Email**: support@darwin-ai.com
-- **Telegram**: [@darwingjzx](https://t.me/darwingjzx)
+Darwin 是一个由 AI 驱动的加密电商生态系统，任何人都能借此建立一个全球化、自动化、持续进化的在线业务。全天候运行你的电商商店，实现全自动化和持续盈利。  
+Darwin is an AI-powered crypto e-commerce ecosystem that empowers anyone to build a global, automated, and continuously evolving online business. Run your store 24/7 with full automation and generate profits effortlessly.
 
 ---
 
-**Built with ❤️ by the Darwin AI Team**
+## 愿景：AI 成为你的商业伙伴  
+## Vision: AI as Your Business Co-founder
 
-*Empowering the future of autonomous e-commerce through artificial intelligence*
+Darwin 将 AI 转化为你的智能联合创始人——自动化决策、运营与增长。你专注于创意与产品，AI 则负责采购、定价、履约、营销与客户支持。  
+Darwin transforms AI into your intelligent co-founder—automating decisions, operations, and growth. You focus on creativity and products; AI handles sourcing, pricing, fulfillment, marketing, and customer service.
+
+---
+
+## 核心优势  
+## Key Benefits
+
+- 无国界电商：支持加密支付（如 USDT、USDC 等）  
+- Borderless Commerce: Supports crypto payments (e.g., USDT, USDC, and more)  
+- 持续学习优化：每一次交易都提升 AI 的智能运营能力  
+- Continuous Learning: Every transaction enhances AI’s operational intelligence  
+- 无需组建团队：AI 全自动运营商店  
+- Zero Team Required: Fully automated AI-powered operations  
+- 全球触达：与 ForestMarket.net 集成，面向全球买家  
+- Global Reach: Integrated with ForestMarket.net for worldwide accessibility
+
+---
+
+## 核心 AI 模块  
+## Core AI Modules
+
+### 多智能体系统 / Multi-Agent System  
+多个专精 AI 代理覆盖业务全流程：  
+Specialized AI agents cover the full spectrum of operations:  
+- 产品选择与策展 / Product selection and curation  
+- 动态定价策略 / Dynamic pricing strategies  
+- 风险评估与控制 / Risk assessment and control  
+- 客服自动化 / Automated customer support  
+- 营销活动管理 / Marketing campaign management  
+
+### AI 驱动的产品采购 / AI-Powered Product Sourcing  
+- 实时趋势分析 / Real-time trend analysis  
+- 用户偏好预测 / User preference prediction  
+- 竞品监控与分析 / Competitor monitoring and analysis  
+- 市场机会识别 / Market opportunity identification  
+
+### 智能库存与物流 / Smart Inventory & Logistics  
+- 自动化 API 集成 / Automated API integrations  
+- 智能补货系统 / Intelligent restocking systems  
+- 优化配送路径 / Optimized delivery routing  
+- 供应链管理 / Supply chain management  
+
+### AI 营销引擎 / AI Marketing Engine  
+- 内容自动生成 / Automated content generation  
+- 高级用户分群 / Advanced user segmentation  
+- 多语种广告活动创建 / Multi-language campaign creation  
+- 营销效果优化 / Performance optimization  
+
+### 风控与合规自动化 / Risk & Compliance Automation  
+- 定价安全机制 / Dynamic pricing safeguards  
+- 海关/税务规则自动查找 / Automated customs/tax rule lookups  
+- 支付合规监控 / Payment compliance monitoring  
+- 欺诈识别与预防 / Fraud detection and prevention  
+
+### 加密支付集成 / Crypto Payment Integration  
+- 支持 MetaMask 与 OKX 钱包 / MetaMask and OKX wallet support  
+- 实时结算处理 / Real-time settlement  
+- 无需银行账户 / No banking barriers  
+- 多种加密货币支付支持 / Multi-cryptocurrency support  
+
+---
+
+## Darwin 如何持续进化  
+## How Darwin Evolves
+
+Darwin 通过机器学习不断优化自身：  
+Darwin continuously improves itself through machine learning:  
+- 交易数据学习：每一次销售、成本与互动都成为训练数据  
+- Transactional Data Learning: Each sale, cost, and interaction becomes training data  
+- 实时优化：动态定价与趋势预测  
+- Real-Time Optimization: Dynamic pricing and trend forecasting  
+- 表现增强：广告效果与客户留存优化  
+- Performance Enhancement: Ad performance and customer retention optimization  
+- 预测分析：客户画像与行为预测  
+- Predictive Analytics: Customer profiling and behavioral prediction  
+
+这使 Darwin 成为一个能够学习、盈利、进化的 AI 电商系统。  
+Darwin is an AI commerce system that learns, earns, and evolves alongside your business.
+
+---
+
+## 技术栈  
+## Tech Stack
+
+- 前端：Next.js 15、React 19、TypeScript  
+- Frontend: Next.js 15, React 19, TypeScript  
+- 样式：Tailwind CSS、Radix UI 组件库  
+- Styling: Tailwind CSS, Radix UI Components  
+- 内容管理：BaseHub CMS  
+- Content Management: BaseHub CMS  
+- 邮件服务：Resend API  
+- Email Service: Resend API  
+- 身份认证：Next-themes 主题管理  
+- Authentication: Next-themes for theme management  
+- 部署：Vercel  
+- Deployment: Vercel  
+- DIFy 平台集成  
+- DIFy platform integration  
+- Kimi 平台，用于 AI 助手和自动化任务  
+- Kimi platform for AI assistant and automation tasks  
+- Telegram 机器人  
+- Telegram bot  
+
+---
+
+## 开源协议  
+## License
+
+本项目遵循 MIT 开源协议，详见 LICENSE  
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+---
+
+## 项目链接  
+## Links
+
+- 推特：Twitter [@DarwinGjzx](https://x.com/DarwinGjzx)  
+- Twitter: [@DarwinGjzx](https://x.com/DarwinGjzx)  
+- 电报群：Telegram [@darwingjzx](https://t.me/darwingjzx)  
+- Telegram: [@darwingjzx](https://t.me/darwingjzx)  
+
+---
+
+由 Darwin AI 团队倾力打造  
+Built with by the Darwin AI Team  
+用人工智能赋能未来的自主电商世界  
+Empowering the future of autonomous e-commerce through artificial intelligence
