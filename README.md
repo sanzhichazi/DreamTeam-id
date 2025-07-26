@@ -1,6 +1,5 @@
 # The AI-Powered Crypto E-commerce Ecosystem
 
-![Darwin AI E-commerce Platform](https://github.com/basehub-ai/waitlist-template/blob/main/public/waitlist-template.png?raw=true)
 
 **Darwin** is an AI-powered crypto e-commerce ecosystem that enables anyone to build a global, automated, and ever-evolving online business. Run your e-commerce store with AI, 24/7, fully automated and profit-generating.
 
