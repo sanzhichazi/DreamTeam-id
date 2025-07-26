@@ -74,16 +74,16 @@ export function PlaygroundSetupModal({ playgroundInfo, envs }: PlaygroundSetupMo
       <button
         onClick={() => setOpen(true)}
         className={cn(
-          "inline-flex absolute top-4 right-4 items-center justify-center text-center gap-2 px-4 h-9 font-medium transition-all duration-200 rounded-lg outline-none pointer-events-auto bg-slate-12 hover:bg-slate-11 text-sm text-slate-1 shadow-sm",
+          "inline-flex absolute top-4 right-4 items-center justify-center text-center gap-2 px-4 h-9 font-medium transition-all duration-200 rounded-lg outline-none pointer-events-auto bg-red-600 hover:bg-red-700 text-sm text-white shadow-sm",
           open && "opacity-20 scale-95 pointer-events-none",
         )}
       >
         {hasPlaygroundExpiry ? (
-          <Clock className="w-4 h-4 text-slate-1" />
+          <Clock className="w-4 h-4 text-white" />
         ) : (
-          <AlertTriangle className="w-4 h-4 text-slate-1" />
+          <AlertTriangle className="w-4 h-4 text-white" />
         )}
-        <span className={cn("text-base text-slate-1")}>Waitlist Setup</span>
+        <span className={cn("text-base text-white")}>配置需要</span>
       </button>
       {/* Modal */}
       <div
@@ -95,7 +95,7 @@ export function PlaygroundSetupModal({ playgroundInfo, envs }: PlaygroundSetupMo
       >
         <div className="flex items-center justify-between flex-shrink-0 px-4 py-3 border-b border-dashed bg-slate-2 border-slate-6 rounded-t-xl">
           <div className="flex items-center gap-2">
-            <span className={cn("text-base font-semibold text-slate-12")}>Waitlist Setup</span>
+            <span className={cn("text-base font-semibold text-slate-12")}>Darwin 配置</span>
           </div>
           <a
             href={playgroundInfo.editUrl}
@@ -103,7 +103,7 @@ export function PlaygroundSetupModal({ playgroundInfo, envs }: PlaygroundSetupMo
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-3 h-7 font-medium transition-all duration-200 rounded-lg outline-none bg-slate-12 hover:bg-slate-11 text-sm text-slate-1 shadow-sm border border-slate-6 focus:ring-2 focus:ring-slate-8 focus:ring-offset-1"
           >
-            <ExternalLink className="w-4 h-4" /> Open Playground
+            <ExternalLink className="w-4 h-4" /> 打开配置
           </a>
         </div>
 
@@ -115,9 +115,9 @@ export function PlaygroundSetupModal({ playgroundInfo, envs }: PlaygroundSetupMo
                   <Clock className="w-5 h-5 text-slate-11 flex-shrink-0" />
                   <div className="flex-1">
                     <h3 className="text-sm font-medium text-slate-12 mb-1">
-                      This playground expires in{" "}
+                      此演示环境将在{" "}
                       <span className="font-medium">
-                        {formatTimeRemaining(playgroundInfo.expiresAt)}.{" "}
+                        {formatTimeRemaining(playgroundInfo.expiresAt)} 后过期。{" "}
                         {playgroundInfo.claimUrl && (
                           <a
                             href={playgroundInfo.claimUrl}
@@ -125,7 +125,7 @@ export function PlaygroundSetupModal({ playgroundInfo, envs }: PlaygroundSetupMo
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-sm text-slate-11 hover:text-slate-12 font-medium"
                           >
-                            Claim it.
+                            立即认领
                           </a>
                         )}
                       </span>
@@ -140,6 +140,9 @@ export function PlaygroundSetupModal({ playgroundInfo, envs }: PlaygroundSetupMo
           {!allValid && (
             <div className="bg-slate-1">
               <div className="p-4 space-y-3">
+                <div className="text-sm text-slate-11 mb-3">
+                  <p>需要配置以下环境变量才能正常使用：</p>
+                </div>
                 {envResults.map((env, index) => (
                   <div
                     key={env.name}
@@ -155,7 +158,7 @@ export function PlaygroundSetupModal({ playgroundInfo, envs }: PlaygroundSetupMo
                     <div
                       className={cn(
                         "flex-shrink-0 w-8 h-8 rounded-sm flex items-center justify-center transition-colors duration-150",
-                        env.isValid ? "bg-slate-3 text-slate-12" : "bg-slate-4 text-slate-11",
+                        env.isValid ? "bg-green-100 text-green-600" : "bg-red-100 text-red-600",
                       )}
                     >
                       {env.isValid ? <Check className="w-4 h-4" /> : <AlertTriangle className="w-4 h-4" />}
@@ -163,9 +166,12 @@ export function PlaygroundSetupModal({ playgroundInfo, envs }: PlaygroundSetupMo
                     <div className="flex-1 min-w-0">
                       <div className="text-sm font-medium text-slate-12">{env.label}</div>
                       <div className="font-mono text-xs truncate text-slate-10">{env.name}</div>
+                      {env.name === "BASEHUB_TOKEN" && !env.isValid && (
+                        <div className="text-xs text-slate-9 mt-1">从 BaseHub 仪表板获取令牌</div>
+                      )}
                     </div>
-                    <div className={cn("text-xs font-medium", env.isValid ? "text-slate-11" : "text-slate-10")}>
-                      {env.isValid ? "Set" : "Missing"}
+                    <div className={cn("text-xs font-medium", env.isValid ? "text-green-600" : "text-red-600")}>
+                      {env.isValid ? "已配置" : "缺失"}
                     </div>
                   </div>
                 ))}
@@ -180,7 +186,7 @@ export function PlaygroundSetupModal({ playgroundInfo, envs }: PlaygroundSetupMo
             onClick={() => setIsDismissed(true)}
             className="w-full px-4 py-2 text-sm font-medium text-slate-11 bg-slate-1 border border-slate-6 rounded-lg hover:bg-slate-3 transition-colors duration-150"
           >
-            Dismiss
+            暂时忽略
           </button>
         </div>
       </div>

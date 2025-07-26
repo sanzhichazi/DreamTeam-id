@@ -3,12 +3,12 @@ import { WaitlistWrapper } from "@/components/box"
 import { Alex_Brush } from "next/font/google"
 import clsx from "clsx"
 import type { Metadata } from "next"
-import "../../basehub.config"
 
 const font = Alex_Brush({
   variable: "--font-alex-brush",
   subsets: ["latin"],
   weight: "400",
+  display: "swap",
 })
 
 export const dynamic = "force-static"

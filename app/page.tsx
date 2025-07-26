@@ -42,7 +42,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       icons: [data.settings.metadata.favicon.url],
     }
   } catch (error) {
-    console.error("Failed to fetch metadata:", error)
+    console.error("BaseHub connection failed:", error)
     return {
       title: "Darwin: The AI-Powered Crypto E-commerce Ecosystem",
       description: "Run your e-commerce store with AI, 24/7, fully automated and profit-generating.",
