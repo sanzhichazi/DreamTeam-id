@@ -50,7 +50,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
   } catch (error) {
     console.error("Failed to fetch metadata:", error)
     return {
-      title: "Darwin",
+      title: "The AI-Powered Crypto E-commerce Ecosystem",
       description: "AI as Your Business Partner",
     }
   }

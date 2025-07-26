@@ -3,7 +3,7 @@ import { WaitlistWrapper } from "@/components/box"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Darwin: The AI-Powered Crypto E-commerce Ecosystem",
+  title: "The AI-Powered Crypto E-commerce Ecosystem",
   description: "Run your e-commerce store with AI, 24/7, fully automated and profit-generating.",
 }
 
@@ -13,7 +13,7 @@ export default function Home() {
       {/* Heading */}
       <div className="space-y-3">
         <h1 className="text-2xl sm:text-3xl font-medium text-slate-12 text-pretty">
-          Darwin: The AI-Powered Crypto E-commerce Ecosystem
+          The AI-Powered Crypto E-commerce Ecosystem
         </h1>
         <div className="text-slate-10 space-y-2 text-pretty">
           <p>Run your e-commerce store with AI, 24/7, fully automated and profit-generating.</p>
